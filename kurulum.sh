@@ -3,3 +3,5 @@ sudo pacman -Syu openbox xfce4-panel dunst numlockx obconf lxappearance-gtk3 lxa
 sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com && sudo pacman-key --lsign-key FBA220DFC880C036 && sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
 cd /tmp && git clone https://aur.archlinux.org/yay-git.git && cd yay-git && makepkg -si && sudo systemctl enable zramswap.service && xdg-user-dirs-update
+
+sudo pacman -Syu opendoas  --noconfirm --needed && echo "permit :wheel" | sudo tee /etc/doas.conf && echo "permit nopass keepenv :wheel" | sudo tee /etc/doas.conf && sudo pacman -Rns sudo  --noconfirm --needed && doas ln -s /bin/doas /bin/sudo
