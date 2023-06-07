@@ -1,0 +1,6 @@
+xfce4-panel &
+numlockx on &
+compton &
+feh --bg-scale /usr/share/backgrounds/wp.jpg &
+nm-applet &
+pa-applet &
