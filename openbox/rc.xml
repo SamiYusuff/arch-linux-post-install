@@ -407,6 +407,15 @@
         <command>rofi -show p -modi p:'~/.config/xfce4/desktop/rofi-power-menu --no-symbols'</command>
       </action>
     </keybind>
+    <keybind key="W-S-c">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Konqueror</name>
+        </startupnotify>
+        <command>/run/media/samiarch/Depo/KasaYedek/Tesseract.sh</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
